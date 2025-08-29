@@ -55,5 +55,6 @@ app.post("/bfhl", (req, res) => {
     return res.status(500).json({ is_success: false, message: "Server Error" });
   }
 });
-let port=3000;
-app.listen(port, () => console.log("Server running at http://localhost:3000/bfhl"));
+
+const PORT = process.env.PORT || 3000;  
+app.listen(PORT, () => console.log(`Server running on port ${PORT}/bfhl`));
